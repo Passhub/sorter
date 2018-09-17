@@ -56,7 +56,7 @@ describe('Sorter', () => {
       assert.deepEqual(sorter.at(2), 7);
     });
 
-    it('3', () => {
+    it('4', () => {
       sorter.add(7);
       sorter.add(6);
       sorter.add(5);
@@ -69,7 +69,7 @@ describe('Sorter', () => {
       assert.deepEqual(sorter.at(2), 5);
     });
 
-    it('4', () => {
+    it('5', () => {
       sorter.add(7);
       sorter.add(6);
       sorter.add(5);
@@ -82,7 +82,7 @@ describe('Sorter', () => {
       assert.deepEqual(sorter.at(2), 6);
     });
 
-    it('5', () => {
+    it('6', () => {
       sorter.add(7);
       sorter.add(6);
       sorter.add(5);
@@ -98,7 +98,7 @@ describe('Sorter', () => {
       assert.deepEqual(sorter.at(3), 3);
     });
 
-    it('6', () => {
+    it('7', () => {
       sorter.add(7);
       sorter.add(6);
       sorter.add(5);
@@ -117,7 +117,7 @@ describe('Sorter', () => {
       assert.deepEqual(sorter.at(3), 3);
     });
 
-    it('7', () => {
+    it('8', () => {
       sorter.add(6);
       sorter.add(5);
       sorter.sort([0, 1]);
@@ -134,7 +134,7 @@ describe('Sorter', () => {
       assert.deepEqual(sorter.at(3), 1);
     });
 
-    it('8', () => {
+    it('9', () => {
       sorter.add(6);
       sorter.add(5);
       sorter.sort([0, 1]);
@@ -151,30 +151,13 @@ describe('Sorter', () => {
       assert.deepEqual(sorter.at(3), 1);
     });
 
-    it('9', () => {
-      sorter.add(6);
-      sorter.add(5);
-      sorter.add(2);
-      sorter.add(1);
-
-      sorter.sort([1, 2]);
-      sorter.sort([2, 3]);
-  
-      assert.deepEqual(sorter.toArray(), [6, 2, 1, 5]);
-      assert.deepEqual(sorter.length, 4);
-      assert.deepEqual(sorter.at(0), 6);
-      assert.deepEqual(sorter.at(1), 2);
-      assert.deepEqual(sorter.at(2), 1);
-      assert.deepEqual(sorter.at(3), 5);
-    });
-
     it('10', () => {
       sorter.add(6);
       sorter.add(5);
       sorter.add(2);
       sorter.add(1);
 
-      sorter.sort([2, 1]);
+      sorter.sort([1, 2]);
       sorter.sort([2, 3]);
   
       assert.deepEqual(sorter.toArray(), [6, 2, 1, 5]);
@@ -192,7 +175,7 @@ describe('Sorter', () => {
       sorter.add(1);
 
       sorter.sort([2, 1]);
-      sorter.sort([3, 2]);
+      sorter.sort([2, 3]);
   
       assert.deepEqual(sorter.toArray(), [6, 2, 1, 5]);
       assert.deepEqual(sorter.length, 4);
@@ -203,6 +186,23 @@ describe('Sorter', () => {
     });
 
     it('12', () => {
+      sorter.add(6);
+      sorter.add(5);
+      sorter.add(2);
+      sorter.add(1);
+
+      sorter.sort([2, 1]);
+      sorter.sort([3, 2]);
+  
+      assert.deepEqual(sorter.toArray(), [6, 2, 1, 5]);
+      assert.deepEqual(sorter.length, 4);
+      assert.deepEqual(sorter.at(0), 6);
+      assert.deepEqual(sorter.at(1), 2);
+      assert.deepEqual(sorter.at(2), 1);
+      assert.deepEqual(sorter.at(3), 5);
+    });
+
+    it('13', () => {
       sorter.add(6);
       sorter.add(5);
       sorter.add(20);
@@ -219,7 +219,7 @@ describe('Sorter', () => {
       assert.deepEqual(sorter.at(3), 20);
     });
 
-    it('13', () => {
+    it('14', () => {
       sorter.add(6);
       sorter.add(5);
       sorter.add(20);
@@ -239,7 +239,7 @@ describe('Sorter', () => {
       assert.deepEqual(sorter.at(4), 100);
     });
 
-    it('14', () => {
+    it('15', () => {
       sorter.add(6);
       sorter.add(5);
       sorter.add(20);
